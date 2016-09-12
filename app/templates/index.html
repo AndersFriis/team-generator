@@ -4,11 +4,31 @@
     <div class="container">
         <h1>Team Generator</h1>
         <p>
-           Generate Teams with Players! 
+           Generate Teams with Players!
         </p>
-        <p>
-            {% for team in group_of_teams.teams %}
-                Team Name: {{ team.name }}
-            {% endfor %}
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <tr>
+                        <th>Team Name</th>
+                        <th>Player 1</th>
+                        <th>Player 2</th>
+                    </tr>
+                    {% for team in group_of_teams.teams %}
+                        <tr>
+                            <td>{{ team.name }}</td>
+                            <td>{{ team.players[0] }}</td>
+                            <td>{{ team.players[1] }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <a href="/"><button class="btn btn-primary btn-block">Get New Team</button></a>
+            </div>
+        </div>
+
     </div>
 {% endblock %}
