@@ -12,6 +12,7 @@ class GroupOfTeams():
         self.teams = []
         self.adjectives = []
         self.nouns = []
+        self.setup()
 
     def setup(self):
         self.set_adjectives()
