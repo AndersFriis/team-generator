@@ -6,6 +6,9 @@
         <p>
            Generate Teams with Players! 
         </p>
-        <p>{{ group_of_teams.text }}
+        <p>
+            {% for team in group_of_teams.teams %}
+                Team Name: {{ team.name }}
+            {% endfor %}
     </div>
 {% endblock %}
